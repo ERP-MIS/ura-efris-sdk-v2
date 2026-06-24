@@ -1,0 +1,4 @@
+interface:
+  display_name: "MMIS Sandbox Safe Execution"
+  short_description: "Avoid Windows wrapper blockers in this MMIS workspace."
+  default_prompt: "Use $mmis-windows-sandbox-safe-execution to execute MMIS repo tasks through the workspace-local PowerShell-safe path."
