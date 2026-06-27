@@ -1,0 +1,93 @@
+{
+    "name":  "mmis_onboarding_safe_path_uat",
+    "variables":  [
+                      {
+                          "key":  "mmis_base_url",
+                          "value":  "http://127.0.0.1:5053"
+                      },
+                      {
+                          "key":  "admin_jwt",
+                          "value":  "replace-admin-jwt"
+                      },
+                      {
+                          "key":  "vendor_jwt",
+                          "value":  "replace-vendor-jwt"
+                      },
+                      {
+                          "key":  "supplier_jwt",
+                          "value":  "replace-supplier-jwt"
+                      },
+                      {
+                          "key":  "seeded_vendor_email",
+                          "value":  "replace-vendor@example.com"
+                      },
+                      {
+                          "key":  "seeded_vendor_password",
+                          "value":  "replace-vendor-password"
+                      },
+                      {
+                          "key":  "seeded_supplier_email",
+                          "value":  "replace-supplier@example.com"
+                      },
+                      {
+                          "key":  "seeded_supplier_password",
+                          "value":  "replace-supplier-password"
+                      },
+                      {
+                          "key":  "vendor_market_id",
+                          "value":  "replace-market-uuid"
+                      },
+                      {
+                          "key":  "vendor_shop_name",
+                          "value":  "Replace Shop Name"
+                      },
+                      {
+                          "key":  "vendor_stall_number",
+                          "value":  "A-01"
+                      },
+                      {
+                          "key":  "vendor_monthly_rent",
+                          "value":  "150000"
+                      },
+                      {
+                          "key":  "vendor_tax_id_number",
+                          "value":  "replace-vendor-tin"
+                      },
+                      {
+                          "key":  "supplier_name",
+                          "value":  "Replace Supplier"
+                      },
+                      {
+                          "key":  "supplier_email",
+                          "value":  "replace-new-supplier@example.com"
+                      },
+                      {
+                          "key":  "supplier_password",
+                          "value":  "ReplaceSupplierPass123!"
+                      },
+                      {
+                          "key":  "supplier_business_name",
+                          "value":  "Replace Supplier Business"
+                      },
+                      {
+                          "key":  "supplier_market_id",
+                          "value":  "replace-market-uuid"
+                      },
+                      {
+                          "key":  "supplier_tax_id",
+                          "value":  "replace-supplier-taxid"
+                      },
+                      {
+                          "key":  "supplier_tax_id_number",
+                          "value":  "replace-supplier-taxid"
+                      },
+                      {
+                          "key":  "supplier_type",
+                          "value":  "WHOLESALER"
+                      },
+                      {
+                          "key":  "tin_document_path",
+                          "value":  "C:/replace/path/to/tin-evidence.pdf"
+                      }
+                  ]
+}

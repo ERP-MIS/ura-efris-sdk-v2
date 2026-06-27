@@ -1,0 +1,2726 @@
+{
+  "info": {
+    "_postman_id": "6b6d3a25-aef4-46c0-b7fa-00a99f6d4b59",
+    "name": "MMIS Backend API - Local UAT + URA/EFRIS Foundation",
+    "description": "Import with the MMIS Local UAT Postman Environment. Login first to populate accessToken. URA/EFRIS entries reflect the implemented URA Partner Service foundation; full EFRIS invoice fiscalization endpoints are not implemented in this backend snapshot.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{accessToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:5000"
+    },
+    {
+      "key": "accessToken",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "00 Auth And Session",
+      "description": "",
+      "item": [
+        {
+          "name": "Login - save accessToken",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/login",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{adminEmail}}\",\n  \"password\": \"{{adminPassword}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"login succeeded\", function () { pm.response.to.have.status(200); });",
+                  "const json = pm.response.json();",
+                  "if (json && json.data && json.data.accessToken) { pm.environment.set(\"accessToken\", json.data.accessToken); }"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Current User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/auth/me",
+            "description": ""
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/refresh",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refreshToken\": \"{{refreshToken}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/logout",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refreshToken\": \"{{refreshToken}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Register Vendor Stakeholder",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/register",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{userEmail}}\",\n  \"name\": \"{{userName}}\",\n  \"phone\": \"{{phone}}\",\n  \"password\": \"{{password}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Register Supplier Stakeholder",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/register-supplier",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{supplierEmail}}\",\n  \"name\": \"{{supplierName}}\",\n  \"phone\": \"{{phone}}\",\n  \"password\": \"{{password}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Verify Email - GET",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/auth/verify-email?token={{emailVerificationToken}}",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          }
+        },
+        {
+          "name": "Verify Email - POST",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/verify-email",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"{{emailVerificationToken}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Verify Vendor Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/auth/verify-vendor-email?token={{vendorEmailToken}}",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          }
+        },
+        {
+          "name": "Set Vendor Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/set-vendor-password",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"{{vendorEmailToken}}\",\n  \"password\": \"{{password}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Verify Supplier Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/auth/verify-supplier-email?token={{supplierEmailToken}}",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          }
+        },
+        {
+          "name": "Set Supplier Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/set-supplier-password",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"{{supplierEmailToken}}\",\n  \"password\": \"{{password}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Verify Gate Counter Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/auth/verify-gate-counter-email?token={{gateCounterEmailToken}}",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          }
+        },
+        {
+          "name": "Set Gate Counter Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/set-gate-counter-password",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"{{gateCounterEmailToken}}\",\n  \"password\": \"{{password}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Invite Market Master",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/invite-marketmaster",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{marketMasterEmail}}\",\n  \"name\": \"{{marketMasterName}}\",\n  \"marketId\": \"{{marketId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Verify Market Master Email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/auth/verify-marketmaster-email?token={{marketMasterEmailToken}}",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          }
+        },
+        {
+          "name": "Set Market Master Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/set-marketmaster-password",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"{{marketMasterEmailToken}}\",\n  \"password\": \"{{password}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Public Markets For Auth",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/auth/markets",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          }
+        },
+        {
+          "name": "Resend Verification",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/resend-verification",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{userEmail}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Generate Supplier Gate Token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/gate-token/{{supplierId}}",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"marketId\": \"{{marketId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Forgot Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/forgot-password",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{userEmail}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Reset Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/reset-password",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"{{resetPasswordToken}}\",\n  \"password\": \"{{password}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Kabale Claim - Request Email",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/kabale-claim/request-email",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{userEmail}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Kabale Claim - Verify Email",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/kabale-claim/verify-email",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"{{kabaleClaimToken}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Kabale Claim - Set Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/kabale-claim/set-password",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"password\": \"{{password}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Update Profile",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/update-profile",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"{{userName}}\",\n  \"phone\": \"{{phone}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Change Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/auth/change-password",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"currentPassword\": \"{{password}}\",\n  \"newPassword\": \"{{newPassword}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "01 Dashboard And Lookups",
+      "description": "",
+      "item": [
+        {
+          "name": "Dashboard - Users Under Me Count",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/dashboard/users/under-me/count",
+            "description": ""
+          }
+        },
+        {
+          "name": "Cities - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/cities",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 Markets, Shops, Gates",
+      "description": "",
+      "item": [
+        {
+          "name": "Markets - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/markets",
+            "description": ""
+          }
+        },
+        {
+          "name": "Markets - Name List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/markets/market-name-list",
+            "description": ""
+          }
+        },
+        {
+          "name": "Markets - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/markets",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"{{marketName}}\",\n  \"cityId\": \"{{cityId}}\",\n  \"address\": \"{{marketAddress}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Markets - Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/markets/{{marketId}}",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"{{marketName}}\",\n  \"cityId\": \"{{cityId}}\",\n  \"address\": \"{{marketAddress}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Markets - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/markets/{{marketId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Markets - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/markets/{{marketId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Shops - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/shops",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"marketId\": \"{{marketId}}\",\n  \"levelId\": \"{{marketLevelId}}\",\n  \"sectionId\": \"{{marketSectionId}}\",\n  \"shopNo\": \"{{shopNo}}\",\n  \"monthlyRent\": 100000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Shops - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/shops?marketId={{marketId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Shops - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/shops/{{shopId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Shops - Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/shops/{{shopId}}",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"marketId\": \"{{marketId}}\",\n  \"levelId\": \"{{marketLevelId}}\",\n  \"sectionId\": \"{{marketSectionId}}\",\n  \"shopNo\": \"{{shopNo}}\",\n  \"monthlyRent\": 100000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Shops - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/shops/{{shopId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Levels - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/marketLevels",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"marketId\": \"{{marketId}}\",\n  \"name\": \"{{marketLevelName}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Market Levels - By Market",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/marketLevels/by-market/{{marketId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Levels - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/marketLevels",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Levels - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/marketLevels/{{marketLevelId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Levels - Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/marketLevels/{{marketLevelId}}",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"marketId\": \"{{marketId}}\",\n  \"name\": \"{{marketLevelName}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Market Levels - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/marketLevels/{{marketLevelId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Sections - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/marketSections",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"marketId\": \"{{marketId}}\",\n  \"levelId\": \"{{marketLevelId}}\",\n  \"name\": \"{{marketSectionName}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Market Sections - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/marketSections?marketId={{marketId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Sections - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/marketSections/{{marketSectionId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Sections - Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/marketSections/{{marketSectionId}}",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"marketId\": \"{{marketId}}\",\n  \"levelId\": \"{{marketLevelId}}\",\n  \"name\": \"{{marketSectionName}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Market Sections - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/marketSections/{{marketSectionId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Gates - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/market-gates",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"marketId\": \"{{marketId}}\",\n  \"name\": \"{{gateName}}\",\n  \"code\": \"{{gateCode}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Market Gates - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/market-gates?marketId={{marketId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Gates - By Market",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/market-gates/market/{{marketId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Gates - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/market-gates/{{marketGateId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Gates - Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/market-gates/{{marketGateId}}",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"marketId\": \"{{marketId}}\",\n  \"name\": \"{{gateName}}\",\n  \"code\": \"{{gateCode}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Market Gates - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/market-gates/{{marketGateId}}",
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "03 Vendors, Suppliers, Products",
+      "description": "",
+      "item": [
+        {
+          "name": "Vendors - Setup Shop",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/vendors/setup-shop",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vendorId\": \"{{vendorId}}\",\n  \"marketId\": \"{{marketId}}\",\n  \"shopId\": \"{{shopId}}\",\n  \"tinNumber\": \"{{tin}}\",\n  \"businessName\": \"{{taxpayerName}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Vendors - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendors - Approve",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/superadmin/vendors/{{vendorId}}/approve",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Verified in UAT\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Vendors - Reject",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/superadmin/vendors/{{vendorId}}/reject",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Rejected in UAT\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Vendors - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/superadmin/vendors",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{vendorEmail}}\",\n  \"name\": \"{{vendorName}}\",\n  \"businessName\": \"{{vendorBusinessName}}\",\n  \"taxIdNumber\": \"{{tin}}\",\n  \"phone\": \"{{phone}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Vendors - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/superadmin/vendors/{{vendorId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Suppliers - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/suppliers",
+            "description": ""
+          }
+        },
+        {
+          "name": "Suppliers - Setup Profile",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/suppliers/setup-profile",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"businessName\": \"{{supplierBusinessName}}\",\n  \"taxId\": \"{{tin}}\",\n  \"warehouseAddress\": \"{{warehouseAddress}}\",\n  \"deliveryRadius\": 20,\n  \"minimumOrder\": 50000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Suppliers - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/suppliers/{{supplierId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Suppliers - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/suppliers",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{supplierEmail}}\",\n  \"name\": \"{{supplierName}}\",\n  \"phone\": \"{{phone}}\",\n  \"businessName\": \"{{supplierBusinessName}}\",\n  \"taxId\": \"{{tin}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Suppliers - Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/suppliers/{{supplierId}}",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"{{supplierId}}\",\n  \"businessName\": \"{{supplierBusinessName}}\",\n  \"taxId\": \"{{tin}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Suppliers - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/suppliers/{{supplierId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Products - Create For Vendor",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/products",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"{{productName}}\",\n  \"price\": 10000,\n  \"stockQuantity\": 25,\n  \"category\": \"{{productCategory}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Products - List For Vendor",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/products?page=1&limit=20",
+            "description": ""
+          }
+        },
+        {
+          "name": "Products - Bulk Upload CSV",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/products/bulk-upload?dryRun=true",
+            "description": "",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Products - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/products/{{productId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Products - Update",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/products/{{productId}}",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"{{productName}}\",\n  \"price\": 11000,\n  \"stockQuantity\": 30\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Products - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/products/{{productId}}",
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "04 Supply Requests",
+      "description": "",
+      "item": [
+        {
+          "name": "Vendor Supply Requests - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/vendors/supply-requests",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"supplierIds\": [\n    \"{{supplierId}}\"\n  ],\n  \"items\": [\n    {\n      \"productId\": null,\n      \"productDetails\": {\n        \"name\": \"{{productName}}\"\n      },\n      \"quantity\": 10,\n      \"unit\": \"kg\"\n    }\n  ],\n  \"deliveryDeadline\": \"{{futureIsoDate}}\",\n  \"notes\": \"Postman UAT request\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Vendor Supply Requests - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/supply-requests?status=ALL&page=1&limit=20",
+            "description": ""
+          }
+        },
+        {
+          "name": "Supply Requests - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/supply-requests/{{supplyRequestId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Supply Request Bids - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/supply-request-bids?page=1&limit=20",
+            "description": ""
+          }
+        },
+        {
+          "name": "Supply Request Bids - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/supply-request-bids/{{supplyRequestBidId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Supply Request Bids - Accept",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/supply-request-bids/{{supplyRequestBidId}}/accept",
+            "description": ""
+          }
+        },
+        {
+          "name": "Supplier Supply Request Bids - Submit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/suppliers/supply-requests/{{supplyRequestId}}/bids",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"price\": 120000,\n  \"estimatedDeliveryTime\": \"{{futureIsoDate}}\",\n  \"notes\": \"Available for delivery\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "05 Payments, Invoices, Refunds",
+      "description": "",
+      "item": [
+        {
+          "name": "Flutterwave Webhook",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/payments/flutterwave/webhook",
+            "description": "",
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"event\": \"charge.completed\",\n  \"data\": {\n    \"id\": \"{{providerTransactionId}}\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Vendor Payments - Summary",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payments/summary",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Payments - Rent",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payments/rent",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Payments - Tax",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payments/tax",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Payments - History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payments/history",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Payment Attempts - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payments/attempts",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"invoiceId\": \"{{invoiceId}}\",\n  \"amount\": 100000,\n  \"paymentMethod\": \"FLUTTERWAVE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Vendor Payment Attempts - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payments/attempts",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Payment Attempts - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payments/attempts/{{paymentAttemptId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Payment Attempts - Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payments/attempts/{{paymentAttemptId}}/status",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Payment Attempts - Refresh",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payments/attempts/{{paymentAttemptId}}/refresh",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Receipt PDF",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payments/receipts/{{paymentId}}/pdf",
+            "description": ""
+          }
+        },
+        {
+          "name": "Payment Evidence - Upload",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/payments/evidence",
+            "description": "",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "vendorId",
+                  "type": "text",
+                  "value": "{{vendorId}}"
+                },
+                {
+                  "key": "amount",
+                  "type": "text",
+                  "value": "100000"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Rent Payment - Record",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/payments/rent/record",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vendorId\": \"{{vendorId}}\",\n  \"amount\": 100000,\n  \"paymentDate\": \"{{todayIsoDate}}\",\n  \"reference\": \"{{paymentReference}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Admin Payments - Collections",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/payments/collections",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Payments - Outstanding",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/payments/outstanding",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Payments - Vendors",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/payments/vendors",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Payments - Send Reminder",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/admin/payments/send-reminder",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"vendorId\": \"{{vendorId}}\",\n  \"invoiceId\": \"{{invoiceId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Admin Online Payments - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/payments/online",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Online Payments - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/payments/online/{{paymentAttemptId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Online Payments - Reverify",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/payments/online/{{paymentAttemptId}}/reverify",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Webhooks - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/payments/webhooks",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Webhooks - Reprocess",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/payments/webhooks/{{webhookEventId}}/reprocess",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Refunds - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/refunds",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Refunds - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/admin/refunds",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"paymentId\": \"{{paymentId}}\",\n  \"amount\": 10000,\n  \"reason\": \"Postman UAT refund\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Admin Refunds - Update Status",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/admin/refunds/{{refundId}}/status",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"APPROVED\",\n  \"reason\": \"Approved in UAT\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Admin Invoice Generation Runs - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/admin/invoices/generation-runs",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"marketId\": \"{{marketId}}\",\n  \"billingMonth\": \"{{billingMonth}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Admin Invoice Generation Runs - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/invoices/generation-runs",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Invoice Generation Runs - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/invoices/generation-runs/{{generationRunId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Invoices - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/invoices",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Invoices - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/invoices/{{invoiceId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Invoices - PDF",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/invoices/{{invoiceId}}/pdf",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Payment Claims - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/payment-claims",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Payment Claims - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/payment-claims/{{paymentClaimId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Payment Claims - Approve",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/payment-claims/{{paymentClaimId}}/approve",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin Payment Claims - Reject",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/admin/payment-claims/{{paymentClaimId}}/reject",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Rejected in UAT\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Vendor Invoices - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/invoices",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Invoices - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/invoices/{{invoiceId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Invoices - PDF",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/invoices/{{invoiceId}}/pdf",
+            "description": ""
+          }
+        },
+        {
+          "name": "Vendor Payment Claims - Submit",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payment-claims",
+            "description": "",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "invoiceId",
+                  "type": "text",
+                  "value": "{{invoiceId}}"
+                },
+                {
+                  "key": "amount",
+                  "type": "text",
+                  "value": "100000"
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Vendor Payment Claims - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/vendors/{{vendorId}}/payment-claims",
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "06 Notifications, Staff, Gate Tokens",
+      "description": "",
+      "item": [
+        {
+          "name": "Notifications - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/notifications",
+            "description": ""
+          }
+        },
+        {
+          "name": "Notifications - Mark Read",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{baseUrl}}/api/notifications/{{notificationId}}/read",
+            "description": ""
+          }
+        },
+        {
+          "name": "Gate Counter Staff - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/market/gate-counter-staffs",
+            "description": ""
+          }
+        },
+        {
+          "name": "Gate Counter Staff - Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/market/gate-counter-staffs/stats",
+            "description": ""
+          }
+        },
+        {
+          "name": "Gate Counter Staff - Create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/market/gate-counter-staffs",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{gateCounterEmail}}\",\n  \"name\": \"{{gateCounterName}}\",\n  \"marketId\": \"{{marketId}}\",\n  \"gateId\": \"{{marketGateId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Gate Counter Staff - Update",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/market/gate-counter-staffs/{{gateCounterStaffId}}",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"{{gateCounterName}}\",\n  \"gateId\": \"{{marketGateId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Gate Counter Staff - Delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/api/market/gate-counter-staffs/{{gateCounterStaffId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Tokens - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/market/tokens",
+            "description": ""
+          }
+        },
+        {
+          "name": "Market Tokens - Generate Entry",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/market/tokens/entry",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"supplierId\": \"{{supplierId}}\",\n  \"gateId\": \"{{marketGateId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Market Tokens - Record Dispatch",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/market/tokens/dispatch",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"{{gateTokenCode}}\",\n  \"items\": [\n    {\n      \"productName\": \"{{productName}}\",\n      \"quantity\": 10,\n      \"unit\": \"kg\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Market Tokens - Record Exit",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/market/tokens/exit",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"{{gateTokenCode}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Market Tokens - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/market/tokens/{{gateTokenCode}}",
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "07 URA Partner Service / EFRIS Foundation",
+      "description": "These are current URA Partner Service foundation endpoints. The audit/docs mark full EFRIS invoice submission, mapper, serializer, outbox, and fiscal receipt endpoints as not implemented in this snapshot.",
+      "item": [
+        {
+          "name": "URA Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/ura/health",
+            "description": ""
+          }
+        },
+        {
+          "name": "URA TIN Verify",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/ura/tin/verify",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tin\": \"{{tin}}\",\n  \"submittedName\": \"{{taxpayerName}}\",\n  \"entityType\": \"VENDOR\",\n  \"vendorId\": \"{{vendorId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "URA PRN Details",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/ura/prn/details",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"prn\": \"{{prn}}\",\n  \"vendorId\": \"{{vendorId}}\",\n  \"marketId\": \"{{marketId}}\",\n  \"invoiceId\": \"{{invoiceId}}\",\n  \"taxPaymentId\": \"{{taxPaymentId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "URA PRN Generate",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/ura/prn/generate",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 150000,\n  \"tin\": \"{{tin}}\",\n  \"taxHead\": \"{{taxHead}}\",\n  \"taxPayerName\": \"{{taxpayerName}}\",\n  \"referenceNo\": \"{{prnReference}}\",\n  \"vendorId\": \"{{vendorId}}\",\n  \"marketId\": \"{{marketId}}\",\n  \"invoiceId\": \"{{invoiceId}}\",\n  \"taxPaymentId\": \"{{taxPaymentId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "URA Catalog - MDA Listing",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/ura/catalog/mda-listing",
+            "description": ""
+          }
+        },
+        {
+          "name": "URA Catalog - MDA Tax Codes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/ura/catalog/mda-tax-codes",
+            "description": ""
+          }
+        },
+        {
+          "name": "URA Catalog - Tax Head Detail",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/ura/catalog/tax-head-detail",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taxHeadCode\": \"{{taxHead}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Admin URA Requests - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/ura/requests?page=1&limit=50",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin URA Requests - Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/ura/requests/{{uraRequestId}}",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin URA Requests - Retry",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/ura/requests/{{uraRequestId}}/retry",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin URA TIN Verifications - List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/api/admin/ura/tin-verifications?page=1&limit=50",
+            "description": ""
+          }
+        },
+        {
+          "name": "Admin URA TIN Verifications - Override",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/api/admin/ura/tin-verifications/{{tinVerificationId}}/override",
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Manual UAT override with supporting evidence attached to ticket.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "08 Onboarding KYC Access Gates",
+      "description": "TIN-now/NIN-next onboarding tests. These requests document the target access gate: email verification and admin approval should permit KYC entry, while full Vendor/Supplier operations unlock only after URA TIN verification or audited override. NIN is captured in v1; NIRA verification is a follow-up integration.",
+      "item": [
+        {
+          "name": "Register Vendor Applicant",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/register",
+              "host": [
+                "{{baseUrl}}",
+                "api",
+                "auth",
+                "register"
+              ]
+            },
+            "description": "Creates a vendor applicant. Expected target behavior: applicant can verify email and enter KYC, but must not receive full vendor operations until TIN verification succeeds.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"KYC Vendor Applicant\",\n  \"email\": \"kyc.vendor@example.com\",\n  \"password\": \"ChangeMe123!\",\n  \"phone\": \"+256700000001\",\n  \"userType\": \"vendor\",\n  \"businessName\": \"KYC Vendor Traders\",\n  \"taxIdNumber\": \"{{validTin}}\",\n  \"nationalId\": \"{{applicantNin}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register Supplier Applicant",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/register-supplier",
+              "host": [
+                "{{baseUrl}}",
+                "api",
+                "auth",
+                "register-supplier"
+              ]
+            },
+            "description": "Creates a supplier applicant. Target behavior mirrors vendor: email verification plus admin KYC approval does not equal full supplier activation.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"KYC Supplier Applicant\",\n  \"email\": \"kyc.supplier@example.com\",\n  \"password\": \"ChangeMe123!\",\n  \"phone\": \"+256700000002\",\n  \"businessName\": \"KYC Supplier Limited\",\n  \"taxId\": \"{{validTin}}\",\n  \"nationalId\": \"{{applicantNin}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Verify Applicant Email",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/verify-email",
+              "host": [
+                "{{baseUrl}}",
+                "api",
+                "auth",
+                "verify-email"
+              ]
+            },
+            "description": "Verifies applicant email. Current backend creates Stakeholder plus Vendor/Supplier records and starts UNDER_REVIEW/TIN verification when possible.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"{{emailVerificationToken}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Current User Access State Probe",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/me",
+              "host": [
+                "{{baseUrl}}",
+                "api",
+                "auth",
+                "me"
+              ]
+            },
+            "description": "Use after login to verify role, kycStatus, taxComplianceStatus, and future onboardingAccessStatus once implemented."
+          },
+          "response": []
+        },
+        {
+          "name": "Vendor KYC Setup - TIN NIN Evidence",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/vendors/setup-shop",
+              "host": [
+                "{{baseUrl}}",
+                "api",
+                "vendors",
+                "setup-shop"
+              ]
+            },
+            "description": "Submits vendor KYC evidence. Expected target behavior: full vendor access unlocks only after TIN VERIFIED or OVERRIDDEN.",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "businessName",
+                  "value": "KYC Vendor Traders",
+                  "type": "text"
+                },
+                {
+                  "key": "taxIdNumber",
+                  "value": "{{validTin}}",
+                  "type": "text"
+                },
+                {
+                  "key": "nationalId",
+                  "value": "{{applicantNin}}",
+                  "type": "text",
+                  "description": "Captured in v1; NIRA verification is follow-up."
+                },
+                {
+                  "key": "marketId",
+                  "value": "{{marketId}}",
+                  "type": "text"
+                },
+                {
+                  "key": "shopName",
+                  "value": "KYC Vendor Shop",
+                  "type": "text"
+                },
+                {
+                  "key": "tinDocument",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supplier KYC Setup - TIN NIN Evidence",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/suppliers/setup-profile",
+              "host": [
+                "{{baseUrl}}",
+                "api",
+                "suppliers",
+                "setup-profile"
+              ]
+            },
+            "description": "Submits supplier KYC evidence. Expected target behavior: full supplier access unlocks only after TIN VERIFIED or OVERRIDDEN.",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "businessName",
+                  "value": "KYC Supplier Limited",
+                  "type": "text"
+                },
+                {
+                  "key": "taxIdNumber",
+                  "value": "{{validTin}}",
+                  "type": "text"
+                },
+                {
+                  "key": "nationalId",
+                  "value": "{{applicantNin}}",
+                  "type": "text",
+                  "description": "Captured in v1; NIRA verification is follow-up."
+                },
+                {
+                  "key": "tinDocument",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Backend URA TIN Verification",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/ura/tin/verify",
+              "host": [
+                "{{baseUrl}}",
+                "api",
+                "ura",
+                "tin",
+                "verify"
+              ]
+            },
+            "description": "Backend-routed TIN verification. Do not call direct URA provider URLs from frontend or normal MMIS UAT collections.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tin\": \"{{validTin}}\",\n  \"submittedName\": \"KYC Vendor Traders\",\n  \"entityType\": \"VENDOR\",\n  \"vendorId\": \"{{vendorId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin TIN Verification Override",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/admin/ura/tin-verifications/{{tinVerificationId}}/override",
+              "host": [
+                "{{baseUrl}}",
+                "api",
+                "admin",
+                "ura",
+                "tin-verifications",
+                "{{tinVerificationId}}",
+                "override"
+              ]
+            },
+            "description": "Manual override remains admin-only, reason-required, and auditable.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Approved after reviewed tax receipt and corrected business name evidence.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Approve Vendor - Should Require TIN",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/superadmin/vendors/{{vendorId}}/approve",
+              "host": [
+                "{{baseUrl}}",
+                "api",
+                "superadmin",
+                "vendors",
+                "{{vendorId}}",
+                "approve"
+              ]
+            },
+            "description": "Regression probe for access bypass. Product clarification still needed for whether this endpoint means KYC approval or full activation.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"notes\": \"Target: approval grants KYC entry or final activation only when TIN is VERIFIED/OVERRIDDEN, depending final onboardingAccessStatus design.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+    "id":  "mmis-onboarding-safe-path-uat-env",
+    "name":  "MMIS Onboarding Safe Path UAT Env",
+    "values":  [
+                   {
+                       "key":  "baseUrl",
+                       "value":  "http://127.0.0.1:5053",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "adminEmail",
+                       "value":  "replace-admin@example.com",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "adminPassword",
+                       "value":  "replace-admin-password",
+                       "type":  "secret",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "seededVendorEmail",
+                       "value":  "replace-vendor@example.com",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "seededVendorPassword",
+                       "value":  "replace-vendor-password",
+                       "type":  "secret",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "seededSupplierEmail",
+                       "value":  "replace-supplier@example.com",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "seededSupplierPassword",
+                       "value":  "replace-supplier-password",
+                       "type":  "secret",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "vendorName",
+                       "value":  "Replace Vendor",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "vendorEmail",
+                       "value":  "replace-new-vendor@example.com",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "vendorPassword",
+                       "value":  "ReplaceVendorPass123!",
+                       "type":  "secret",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "vendorMarketId",
+                       "value":  "replace-market-uuid",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "vendorShopName",
+                       "value":  "Replace Shop Name",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "vendorStallNumber",
+                       "value":  "A-01",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "vendorMonthlyRent",
+                       "value":  "150000",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "vendorTaxIdNumber",
+                       "value":  "replace-vendor-tin",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "supplierName",
+                       "value":  "Replace Supplier",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "supplierEmail",
+                       "value":  "replace-new-supplier@example.com",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "supplierPassword",
+                       "value":  "ReplaceSupplierPass123!",
+                       "type":  "secret",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "supplierBusinessName",
+                       "value":  "Replace Supplier Business",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "supplierMarketId",
+                       "value":  "replace-market-uuid",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "supplierTaxId",
+                       "value":  "replace-supplier-taxid",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "supplierTaxIdNumber",
+                       "value":  "replace-supplier-taxid",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "supplierType",
+                       "value":  "WHOLESALER",
+                       "type":  "default",
+                       "enabled":  true
+                   },
+                   {
+                       "key":  "tinDocumentPath",
+                       "value":  "C:/replace/path/to/tin-evidence.pdf",
+                       "type":  "default",
+                       "enabled":  true
+                   }
+               ]
+}

@@ -1,0 +1,444 @@
+{
+    "v":  12,
+    "id":  "col-onboarding-safe-path-uat",
+    "name":  "MMIS Onboarding Safe Path UAT 2026-06-26",
+    "folders":  [
+                    {
+                        "v":  12,
+                        "id":  "fld-auth-contract",
+                        "name":  "Public Contract Checks",
+                        "folders":  [
+
+                                    ],
+                        "requests":  [
+                                         {
+                                             "v":  "17",
+                                             "id":  "req-auth-markets",
+                                             "name":  "GET /api/auth/markets",
+                                             "method":  "GET",
+                                             "endpoint":  "\u003c\u003cmmis_base_url\u003e\u003e/api/auth/markets",
+                                             "params":  [
+
+                                                        ],
+                                             "headers":  [
+
+                                                         ],
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false
+                                                      },
+                                             "body":  {
+                                                          "body":  null,
+                                                          "contentType":  null
+                                                      },
+                                             "responses":  {
+
+                                                           },
+                                             "description":  "Public market list needed before registration.",
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\u0027markets returns 200\u0027, () =\u003e { pw.expect(pw.response.status).toBe(200); });",
+                                             "requestVariables":  [
+
+                                                                  ]
+                                         },
+                                         {
+                                             "v":  "17",
+                                             "id":  "req-auth-supplier-missing-taxid",
+                                             "name":  "POST /api/auth/register-supplier missing taxId -\u003e 400",
+                                             "method":  "POST",
+                                             "endpoint":  "\u003c\u003cmmis_base_url\u003e\u003e/api/auth/register-supplier",
+                                             "params":  [
+
+                                                        ],
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Content-Type",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false
+                                                      },
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  "{\n  \"name\": \"\u003c\u003csupplier_name\u003e\u003e\",\n  \"email\": \"\u003c\u003csupplier_email\u003e\u003e\",\n  \"password\": \"\u003c\u003csupplier_password\u003e\u003e\",\n  \"businessName\": \"\u003c\u003csupplier_business_name\u003e\u003e\",\n  \"marketId\": \"\u003c\u003csupplier_market_id\u003e\u003e\"\n}"
+                                                      },
+                                             "responses":  {
+
+                                                           },
+                                             "description":  "Negative contract check proving backend requires taxId.",
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\u0027missing taxId is rejected\u0027, () =\u003e { pw.expect(pw.response.status).toBe(400); });",
+                                             "requestVariables":  [
+
+                                                                  ]
+                                         },
+                                         {
+                                             "v":  "17",
+                                             "id":  "req-auth-supplier-register",
+                                             "name":  "POST /api/auth/register-supplier with taxId",
+                                             "method":  "POST",
+                                             "endpoint":  "\u003c\u003cmmis_base_url\u003e\u003e/api/auth/register-supplier",
+                                             "params":  [
+
+                                                        ],
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Content-Type",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false
+                                                      },
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  "{\n  \"name\": \"\u003c\u003csupplier_name\u003e\u003e\",\n  \"email\": \"\u003c\u003csupplier_email\u003e\u003e\",\n  \"password\": \"\u003c\u003csupplier_password\u003e\u003e\",\n  \"businessName\": \"\u003c\u003csupplier_business_name\u003e\u003e\",\n  \"marketId\": \"\u003c\u003csupplier_market_id\u003e\u003e\",\n  \"taxId\": \"\u003c\u003csupplier_tax_id\u003e\u003e\",\n  \"supplierType\": \"\u003c\u003csupplier_type\u003e\u003e\"\n}"
+                                                      },
+                                             "responses":  {
+
+                                                           },
+                                             "description":  "Positive supplier registration using current backend-required taxId field.",
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\u0027supplier registration accepted\u0027, () =\u003e { pw.expect(pw.response.status === 200 || pw.response.status === 201).toBe(true); });",
+                                             "requestVariables":  [
+
+                                                                  ]
+                                         }
+                                     ],
+                        "auth":  {
+                                     "authType":  "inherit",
+                                     "authActive":  true
+                                 },
+                        "headers":  [
+
+                                    ],
+                        "variables":  [
+
+                                      ],
+                        "description":  "Public registration contract checks.",
+                        "preRequestScript":  "",
+                        "testScript":  ""
+                    },
+                    {
+                        "v":  12,
+                        "id":  "fld-auth-login",
+                        "name":  "Seeded Auth And Identity",
+                        "folders":  [
+
+                                    ],
+                        "requests":  [
+                                         {
+                                             "v":  "17",
+                                             "id":  "req-auth-login-vendor",
+                                             "name":  "POST /api/auth/login vendor",
+                                             "method":  "POST",
+                                             "endpoint":  "\u003c\u003cmmis_base_url\u003e\u003e/api/auth/login",
+                                             "params":  [
+
+                                                        ],
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Content-Type",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false
+                                                      },
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  "{\n  \"email\": \"\u003c\u003cseeded_vendor_email\u003e\u003e\",\n  \"password\": \"\u003c\u003cseeded_vendor_password\u003e\u003e\"\n}"
+                                                      },
+                                             "responses":  {
+
+                                                           },
+                                             "description":  "Login for a seeded, email-verified vendor account.",
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\u0027vendor login returns 200\u0027, () =\u003e { pw.expect(pw.response.status).toBe(200); });",
+                                             "requestVariables":  [
+
+                                                                  ]
+                                         },
+                                         {
+                                             "v":  "17",
+                                             "id":  "req-auth-login-supplier",
+                                             "name":  "POST /api/auth/login supplier",
+                                             "method":  "POST",
+                                             "endpoint":  "\u003c\u003cmmis_base_url\u003e\u003e/api/auth/login",
+                                             "params":  [
+
+                                                        ],
+                                             "headers":  [
+                                                             {
+                                                                 "key":  "Content-Type",
+                                                                 "value":  "application/json",
+                                                                 "active":  true
+                                                             }
+                                                         ],
+                                             "auth":  {
+                                                          "authType":  "none",
+                                                          "authActive":  false
+                                                      },
+                                             "body":  {
+                                                          "contentType":  "application/json",
+                                                          "body":  "{\n  \"email\": \"\u003c\u003cseeded_supplier_email\u003e\u003e\",\n  \"password\": \"\u003c\u003cseeded_supplier_password\u003e\u003e\"\n}"
+                                                      },
+                                             "responses":  {
+
+                                                           },
+                                             "description":  "Login for a seeded, email-verified supplier account.",
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\u0027supplier login returns 200\u0027, () =\u003e { pw.expect(pw.response.status).toBe(200); });",
+                                             "requestVariables":  [
+
+                                                                  ]
+                                         },
+                                         {
+                                             "v":  "17",
+                                             "id":  "req-auth-me-vendor",
+                                             "name":  "GET /api/auth/me vendor",
+                                             "method":  "GET",
+                                             "endpoint":  "\u003c\u003cmmis_base_url\u003e\u003e/api/auth/me",
+                                             "params":  [
+
+                                                        ],
+                                             "headers":  [
+
+                                                         ],
+                                             "auth":  {
+                                                          "authType":  "bearer",
+                                                          "token":  "\u003c\u003cvendor_jwt\u003e\u003e",
+                                                          "authActive":  true
+                                                      },
+                                             "body":  {
+                                                          "body":  null,
+                                                          "contentType":  null
+                                                      },
+                                             "responses":  {
+
+                                                           },
+                                             "description":  "Identity proof for the vendor account.",
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\u0027vendor auth/me returns 200\u0027, () =\u003e { pw.expect(pw.response.status).toBe(200); });",
+                                             "requestVariables":  [
+
+                                                                  ]
+                                         },
+                                         {
+                                             "v":  "17",
+                                             "id":  "req-auth-me-supplier",
+                                             "name":  "GET /api/auth/me supplier",
+                                             "method":  "GET",
+                                             "endpoint":  "\u003c\u003cmmis_base_url\u003e\u003e/api/auth/me",
+                                             "params":  [
+
+                                                        ],
+                                             "headers":  [
+
+                                                         ],
+                                             "auth":  {
+                                                          "authType":  "bearer",
+                                                          "token":  "\u003c\u003csupplier_jwt\u003e\u003e",
+                                                          "authActive":  true
+                                                      },
+                                             "body":  {
+                                                          "body":  null,
+                                                          "contentType":  null
+                                                      },
+                                             "responses":  {
+
+                                                           },
+                                             "description":  "Identity proof for the supplier account.",
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\u0027supplier auth/me returns 200\u0027, () =\u003e { pw.expect(pw.response.status).toBe(200); });",
+                                             "requestVariables":  [
+
+                                                                  ]
+                                         }
+                                     ],
+                        "auth":  {
+                                     "authType":  "inherit",
+                                     "authActive":  true
+                                 },
+                        "headers":  [
+
+                                    ],
+                        "variables":  [
+
+                                      ],
+                        "description":  "Seeded-account auth and identity checks.",
+                        "preRequestScript":  "",
+                        "testScript":  ""
+                    },
+                    {
+                        "v":  12,
+                        "id":  "fld-onboarding-setup",
+                        "name":  "Onboarding Setup And Admin Visibility",
+                        "folders":  [
+
+                                    ],
+                        "requests":  [
+                                         {
+                                             "v":  "17",
+                                             "id":  "req-vendor-setup-shop",
+                                             "name":  "POST /api/vendors/setup-shop",
+                                             "method":  "POST",
+                                             "endpoint":  "\u003c\u003cmmis_base_url\u003e\u003e/api/vendors/setup-shop",
+                                             "params":  [
+
+                                                        ],
+                                             "headers":  [
+
+                                                         ],
+                                             "auth":  {
+                                                          "authType":  "bearer",
+                                                          "token":  "\u003c\u003cvendor_jwt\u003e\u003e",
+                                                          "authActive":  true
+                                                      },
+                                             "body":  {
+                                                          "contentType":  "multipart/form-data",
+                                                          "body":  "marketId=\u003c\u003cvendor_market_id\u003e\u003e\u0026shopName=\u003c\u003cvendor_shop_name\u003e\u003e\u0026stallNumber=\u003c\u003cvendor_stall_number\u003e\u003e\u0026monthlyRent=\u003c\u003cvendor_monthly_rent\u003e\u003e\u0026taxIdNumber=\u003c\u003cvendor_tax_id_number\u003e\u003e\u0026tinDocument=@\u003c\u003ctin_document_path\u003e\u003e"
+                                                      },
+                                             "responses":  {
+
+                                                           },
+                                             "description":  "Vendor shop/stall onboarding plus TIN document evidence.",
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\u0027vendor setup-shop returns 200\u0027, () =\u003e { pw.expect(pw.response.status).toBe(200); });",
+                                             "requestVariables":  [
+
+                                                                  ]
+                                         },
+                                         {
+                                             "v":  "17",
+                                             "id":  "req-supplier-setup-profile",
+                                             "name":  "POST /api/suppliers/setup-profile",
+                                             "method":  "POST",
+                                             "endpoint":  "\u003c\u003cmmis_base_url\u003e\u003e/api/suppliers/setup-profile",
+                                             "params":  [
+
+                                                        ],
+                                             "headers":  [
+
+                                                         ],
+                                             "auth":  {
+                                                          "authType":  "bearer",
+                                                          "token":  "\u003c\u003csupplier_jwt\u003e\u003e",
+                                                          "authActive":  true
+                                                      },
+                                             "body":  {
+                                                          "contentType":  "multipart/form-data",
+                                                          "body":  "businessName=\u003c\u003csupplier_business_name\u003e\u003e\u0026businessType=\u003c\u003csupplier_type\u003e\u003e\u0026taxIdNumber=\u003c\u003csupplier_tax_id_number\u003e\u003e\u0026tinDocument=@\u003c\u003ctin_document_path\u003e\u003e"
+                                                      },
+                                             "responses":  {
+
+                                                           },
+                                             "description":  "Supplier onboarding setup plus TIN document evidence.",
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\u0027supplier setup-profile returns 200\u0027, () =\u003e { pw.expect(pw.response.status).toBe(200); });",
+                                             "requestVariables":  [
+
+                                                                  ]
+                                         },
+                                         {
+                                             "v":  "17",
+                                             "id":  "req-admin-tin-verifications",
+                                             "name":  "GET /api/admin/ura/tin-verifications",
+                                             "method":  "GET",
+                                             "endpoint":  "\u003c\u003cmmis_base_url\u003e\u003e/api/admin/ura/tin-verifications?limit=20",
+                                             "params":  [
+
+                                                        ],
+                                             "headers":  [
+
+                                                         ],
+                                             "auth":  {
+                                                          "authType":  "bearer",
+                                                          "token":  "\u003c\u003cadmin_jwt\u003e\u003e",
+                                                          "authActive":  true
+                                                      },
+                                             "body":  {
+                                                          "body":  null,
+                                                          "contentType":  null
+                                                      },
+                                             "responses":  {
+
+                                                           },
+                                             "description":  "Admin-side persistence visibility for TIN verification outcomes.",
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\u0027admin tin verifications returns 200\u0027, () =\u003e { pw.expect(pw.response.status).toBe(200); });",
+                                             "requestVariables":  [
+
+                                                                  ]
+                                         },
+                                         {
+                                             "v":  "17",
+                                             "id":  "req-admin-efris-outbox",
+                                             "name":  "GET /api/admin/ura/efris-outbox",
+                                             "method":  "GET",
+                                             "endpoint":  "\u003c\u003cmmis_base_url\u003e\u003e/api/admin/ura/efris-outbox?limit=20",
+                                             "params":  [
+
+                                                        ],
+                                             "headers":  [
+
+                                                         ],
+                                             "auth":  {
+                                                          "authType":  "bearer",
+                                                          "token":  "\u003c\u003cadmin_jwt\u003e\u003e",
+                                                          "authActive":  true
+                                                      },
+                                             "body":  {
+                                                          "body":  null,
+                                                          "contentType":  null
+                                                      },
+                                             "responses":  {
+
+                                                           },
+                                             "description":  "Admin-side visibility for current EFRIS outbox queue state after onboarding or retry activity.",
+                                             "preRequestScript":  "",
+                                             "testScript":  "pw.test(\u0027admin efris outbox returns 200\u0027, () =\u003e { pw.expect(pw.response.status).toBe(200); });",
+                                             "requestVariables":  [
+
+                                                                  ]
+                                         }
+                                     ],
+                        "auth":  {
+                                     "authType":  "inherit",
+                                     "authActive":  true
+                                 },
+                        "headers":  [
+
+                                    ],
+                        "variables":  [
+
+                                      ],
+                        "description":  "Real onboarding setup requests that require a DB-backed backend, seeded users, and a real TIN evidence document.",
+                        "preRequestScript":  "",
+                        "testScript":  ""
+                    }
+                ],
+    "requests":  [
+
+                 ],
+    "auth":  {
+                 "authType":  "inherit",
+                 "authActive":  true
+             },
+    "headers":  [
+
+                ],
+    "variables":  [
+
+                  ],
+    "description":  "Execution-focused safe-path UAT subset for live onboarding routes plus admin visibility and EFRIS outbox follow-on checks.",
+    "preRequestScript":  "",
+    "testScript":  ""
+}

@@ -1,0 +1,5931 @@
+{
+  "v": 12,
+  "id": "col-generated-mmis-full-2026-06-23",
+  "name": "MMIS Full Implemented API - Generated Coverage Skeleton",
+  "folders": [
+    {
+      "v": 12,
+      "id": "fld-generated-001",
+      "name": "Auth",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/change-password",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/change-password",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-001"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/forgot-password",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/forgot-password",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-002"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/gate-token/:supplierId",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/gate-token/{{supplierId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-003"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/invite-marketmaster",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/invite-marketmaster",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-004"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/kabale-claim/request-email",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/kabale-claim/request-email",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-005"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/kabale-claim/set-password",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/kabale-claim/set-password",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-006"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/kabale-claim/verify-email",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/kabale-claim/verify-email",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-007"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/login",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/login",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-008"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/logout",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/logout",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-009"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/auth/markets",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/markets",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-010"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/auth/me",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/me",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-011"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/refresh",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/refresh",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-012"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/register",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/register",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-013"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/register-supplier",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/register-supplier",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-014"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/resend-verification",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/resend-verification",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-015"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/reset-password",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/reset-password",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-016"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/set-gate-counter-password",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/set-gate-counter-password",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-017"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/set-marketmaster-password",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/set-marketmaster-password",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-018"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/set-supplier-password",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/set-supplier-password",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-019"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/set-vendor-password",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/set-vendor-password",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-020"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/update-profile",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/update-profile",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-021"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/auth/verify-email",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/verify-email",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-022"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/auth/verify-email",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/verify-email",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-023"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/auth/verify-gate-counter-email",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/verify-gate-counter-email",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-024"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/auth/verify-marketmaster-email",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/verify-marketmaster-email",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-025"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/auth/verify-supplier-email",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/verify-supplier-email",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-026"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/auth/verify-vendor-email",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/auth/verify-vendor-email",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from auth.routes.js mounted at /api/auth.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-027"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from auth.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-002",
+      "name": "Cities",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/cities",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/cities",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from cities.routes.js mounted at /api/cities.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-028"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from cities.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-003",
+      "name": "Dashboard",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/dashboard/users/under-me/count",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/dashboard/users/under-me/count",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from dashboard.routes.js mounted at /api/dashboard.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-029"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from dashboard.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-004",
+      "name": "Delivery",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/deliveries",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/deliveries",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from delivery.routes.js mounted at /api/deliveries.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-030"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/deliveries/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/deliveries/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from delivery.routes.js mounted at /api/deliveries.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-031"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PATCH /api/deliveries/:id/cancel",
+          "method": "PATCH",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/deliveries/{{id}}/cancel",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from delivery.routes.js mounted at /api/deliveries.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-032"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PATCH /api/deliveries/:id/dispatch",
+          "method": "PATCH",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/deliveries/{{id}}/dispatch",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from delivery.routes.js mounted at /api/deliveries.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-033"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PATCH /api/deliveries/:id/receive",
+          "method": "PATCH",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/deliveries/{{id}}/receive",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from delivery.routes.js mounted at /api/deliveries.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-034"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PATCH /api/deliveries/:id/verify",
+          "method": "PATCH",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/deliveries/{{id}}/verify",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from delivery.routes.js mounted at /api/deliveries.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-035"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from delivery.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-005",
+      "name": "Market",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/markets",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/markets",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from market.route.js mounted at /api/markets.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-036"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/markets",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/markets",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from market.route.js mounted at /api/markets.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-037"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/markets/:marketId",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/markets/{{marketId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from market.route.js mounted at /api/markets.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-038"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/markets/:marketId",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/markets/{{marketId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from market.route.js mounted at /api/markets.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-039"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PUT /api/markets/:marketId",
+          "method": "PUT",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/markets/{{marketId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from market.route.js mounted at /api/markets.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-040"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/markets/market-name-list",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/markets/market-name-list",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from market.route.js mounted at /api/markets.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-041"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from market.route.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-006",
+      "name": "MarketGate",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/market-gates",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market-gates",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketGate.routes.js mounted at /api/market-gates.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-042"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/market-gates",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market-gates",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketGate.routes.js mounted at /api/market-gates.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-043"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/market-gates/:id",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market-gates/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketGate.routes.js mounted at /api/market-gates.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-044"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/market-gates/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market-gates/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketGate.routes.js mounted at /api/market-gates.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-045"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PUT /api/market-gates/:id",
+          "method": "PUT",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market-gates/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketGate.routes.js mounted at /api/market-gates.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-046"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/market-gates/market/:marketId",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market-gates/market/{{marketId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketGate.routes.js mounted at /api/market-gates.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-047"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from marketGate.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-007",
+      "name": "MarketLevel",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/marketLevels",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/marketLevels",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketLevel.routes.js mounted at /api/marketLevels.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-048"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/marketLevels",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/marketLevels",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketLevel.routes.js mounted at /api/marketLevels.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-049"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/marketLevels/:id",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/marketLevels/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketLevel.routes.js mounted at /api/marketLevels.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-050"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/marketLevels/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/marketLevels/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketLevel.routes.js mounted at /api/marketLevels.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-051"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PUT /api/marketLevels/:id",
+          "method": "PUT",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/marketLevels/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketLevel.routes.js mounted at /api/marketLevels.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-052"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/marketLevels/by-market/:marketId",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/marketLevels/by-market/{{marketId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketLevel.routes.js mounted at /api/marketLevels.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-053"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from marketLevel.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-008",
+      "name": "MarketSection",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/marketSections",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/marketSections",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketSection.routes.js mounted at /api/marketSections.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-054"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/marketSections",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/marketSections",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketSection.routes.js mounted at /api/marketSections.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-055"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/marketSections/:id",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/marketSections/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketSection.routes.js mounted at /api/marketSections.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-056"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/marketSections/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/marketSections/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketSection.routes.js mounted at /api/marketSections.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-057"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PUT /api/marketSections/:id",
+          "method": "PUT",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/marketSections/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from marketSection.routes.js mounted at /api/marketSections.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-058"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from marketSection.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-009",
+      "name": "Notification",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/notifications",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/notifications",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from notification.routes.js mounted at /api/notifications.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-059"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PATCH /api/notifications/:id/read",
+          "method": "PATCH",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/notifications/{{id}}/read",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from notification.routes.js mounted at /api/notifications.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-060"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from notification.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-010",
+      "name": "Payment",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/invoices",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/invoices",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-061"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/invoices/:invoiceId",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/invoices/{{invoiceId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-062"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/invoices/:invoiceId/pdf",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/invoices/{{invoiceId}}/pdf",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-063"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/invoices/generation-runs",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/invoices/generation-runs",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-064"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/invoices/generation-runs",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/invoices/generation-runs",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-065"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/invoices/generation-runs/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/invoices/generation-runs/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-066"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/payment-claims",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payment-claims",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-067"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/payment-claims/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payment-claims/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-068"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/payment-claims/:id/approve",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payment-claims/{{id}}/approve",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-069"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/payment-claims/:id/reject",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payment-claims/{{id}}/reject",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-070"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/payments/collections",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payments/collections",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-071"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/payments/online",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payments/online",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-072"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/payments/online/:attemptId",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payments/online/{{attemptId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-073"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/payments/online/:attemptId/reverify",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payments/online/{{attemptId}}/reverify",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-074"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/payments/outstanding",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payments/outstanding",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-075"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/payments/send-reminder",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payments/send-reminder",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-076"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/payments/vendors",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payments/vendors",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-077"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/payments/webhooks",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payments/webhooks",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-078"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/payments/webhooks/:eventId/reprocess",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/payments/webhooks/{{eventId}}/reprocess",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-079"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/refunds",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/refunds",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-080"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/refunds",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/refunds",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-081"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/refunds/:refundId/status",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/refunds/{{refundId}}/status",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-082"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/payments/evidence",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/payments/evidence",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-083"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/payments/flutterwave/webhook",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/payments/flutterwave/webhook",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-084"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/payments/rent/record",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/payments/rent/record",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-085"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/invoices",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/invoices",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-086"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/invoices/:invoiceId",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/invoices/{{invoiceId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-087"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/invoices/:invoiceId/pdf",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/invoices/{{invoiceId}}/pdf",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-088"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/payment-claims",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payment-claims",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-089"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/vendors/:vendorId/payment-claims",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payment-claims",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-090"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/payments/attempts",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payments/attempts",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-091"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/vendors/:vendorId/payments/attempts",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payments/attempts",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-092"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/payments/attempts/:attemptId",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payments/attempts/{{attemptId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-093"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/vendors/:vendorId/payments/attempts/:attemptId/refresh",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payments/attempts/{{attemptId}}/refresh",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-094"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/payments/attempts/:attemptId/status",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payments/attempts/{{attemptId}}/status",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-095"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/payments/history",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payments/history",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-096"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/payments/receipts/:paymentId/pdf",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payments/receipts/{{paymentId}}/pdf",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-097"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/payments/rent",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payments/rent",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-098"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/payments/summary",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payments/summary",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-099"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/payments/tax",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/payments/tax",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from payment.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-100"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from payment.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-011",
+      "name": "Product",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/products/:productId",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/products/{{productId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/products.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-101"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/products/:productId",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/products/{{productId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/products.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-102"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PATCH /api/products/:productId",
+          "method": "PATCH",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/products/{{productId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/products.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-103"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/products/:vendorId/products",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/products/{{vendorId}}/products",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/products.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-104"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/products/:vendorId/products",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/products/{{vendorId}}/products",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/products.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-105"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/products/:vendorId/products/bulk-upload",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/products/{{vendorId}}/products/bulk-upload",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/products.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-106"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/products/:vendorId/products/bulk-upload",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/products/{{vendorId}}/products/bulk-upload",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/products.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-107"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/vendors/:productId",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{productId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-108"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:productId",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{productId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-109"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PATCH /api/vendors/:productId",
+          "method": "PATCH",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{productId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-110"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/:vendorId/products",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/products",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-111"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/vendors/:vendorId/products",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/products",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-112"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/vendors/:vendorId/products/bulk-upload",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/products/bulk-upload",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-113"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/vendors/:vendorId/products/bulk-upload",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{vendorId}}/products/bulk-upload",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from product.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-114"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from product.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-012",
+      "name": "Shop",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/shops",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/shops",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from shop.routes.js mounted at /api/shops.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-115"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/shops",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/shops",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from shop.routes.js mounted at /api/shops.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-116"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/shops/:id",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/shops/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from shop.routes.js mounted at /api/shops.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-117"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/shops/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/shops/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from shop.routes.js mounted at /api/shops.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-118"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PUT /api/shops/:id",
+          "method": "PUT",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/shops/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from shop.routes.js mounted at /api/shops.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-119"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from shop.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-013",
+      "name": "Staff",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/market/gate-counter-staffs",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market/gate-counter-staffs",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from staff.routes.js mounted at /api/market/gate-counter-staffs.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-120"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/market/gate-counter-staffs",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market/gate-counter-staffs",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from staff.routes.js mounted at /api/market/gate-counter-staffs.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-121"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/market/gate-counter-staffs/:id",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market/gate-counter-staffs/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from staff.routes.js mounted at /api/market/gate-counter-staffs.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-122"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PUT /api/market/gate-counter-staffs/:id",
+          "method": "PUT",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market/gate-counter-staffs/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from staff.routes.js mounted at /api/market/gate-counter-staffs.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-123"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/market/gate-counter-staffs/stats",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market/gate-counter-staffs/stats",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from staff.routes.js mounted at /api/market/gate-counter-staffs.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-124"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from staff.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-014",
+      "name": "Supplier",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/superadmin/suppliers",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/suppliers",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/superadmin/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-125"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/superadmin/suppliers",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/suppliers",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/superadmin/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-126"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/superadmin/suppliers/:id",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/suppliers/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/superadmin/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-127"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/superadmin/suppliers/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/suppliers/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/superadmin/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-128"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PUT /api/superadmin/suppliers/:id",
+          "method": "PUT",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/suppliers/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/superadmin/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-129"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/superadmin/suppliers/setup-profile",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/suppliers/setup-profile",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/superadmin/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-130"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/suppliers",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/suppliers",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-131"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/suppliers",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/suppliers",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-132"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/suppliers/:id",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/suppliers/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-133"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/suppliers/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/suppliers/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-134"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PUT /api/suppliers/:id",
+          "method": "PUT",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/suppliers/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-135"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/suppliers/setup-profile",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/suppliers/setup-profile",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supplier.routes.js mounted at /api/suppliers.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-136"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from supplier.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-015",
+      "name": "Supply Request",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/suppliers/supply-requests/:supplyRequestId/bids",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/suppliers/supply-requests/{{supplyRequestId}}/bids",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supply-request.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-137"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/supply-request-bids",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/supply-request-bids",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supply-request.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-138"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/supply-request-bids/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/supply-request-bids/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supply-request.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-139"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/supply-requests/:id",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/supply-requests/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supply-request.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-140"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PATCH /api/vendors/supply-request-bids/:id/accept",
+          "method": "PATCH",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/supply-request-bids/{{id}}/accept",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supply-request.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-141"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors/supply-requests",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/supply-requests",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supply-request.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-142"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/vendors/supply-requests",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/supply-requests",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from supply-request.routes.js mounted at /api.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-143"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from supply-request.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-016",
+      "name": "Token",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/market/tokens",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market/tokens",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from token.routes.js mounted at /api/market/tokens.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-144"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/market/tokens/:code",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market/tokens/{{code}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from token.routes.js mounted at /api/market/tokens.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-145"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/market/tokens/dispatch",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market/tokens/dispatch",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from token.routes.js mounted at /api/market/tokens.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-146"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/market/tokens/entry",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market/tokens/entry",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from token.routes.js mounted at /api/market/tokens.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-147"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PUT /api/market/tokens/exit",
+          "method": "PUT",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/market/tokens/exit",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from token.routes.js mounted at /api/market/tokens.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-148"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from token.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-017",
+      "name": "Ura",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/ura/catalog/mda-listing",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/catalog/mda-listing",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-149"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/ura/catalog/mda-tax-codes",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/catalog/mda-tax-codes",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-150"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/ura/catalog/tax-head-detail",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/catalog/tax-head-detail",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-151"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/ura/efris-outbox",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/efris-outbox",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-152"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/ura/efris-outbox/:id/retry",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/efris-outbox/{{id}}/retry",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-153"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/ura/efris-outbox/enqueue-from-request",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/efris-outbox/enqueue-from-request",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-154"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/ura/health",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/health",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-155"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/ura/prn/details",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/prn/details",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-156"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/ura/prn/generate",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/prn/generate",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-157"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/ura/prn/rent-payment",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/prn/rent-payment",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-158"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/ura/rent-payments/:invoicePaymentId/prn",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/rent-payments/{{invoicePaymentId}}/prn",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-159"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/ura/requests",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/requests",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-160"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/ura/requests/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/requests/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-161"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/ura/requests/:id/retry",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/requests/{{id}}/retry",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-162"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/admin/ura/tin-verifications",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/tin-verifications",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-163"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/ura/tin-verifications/:id/override",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/tin-verifications/{{id}}/override",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-164"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/admin/ura/tin/verify",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/admin/ura/tin/verify",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/admin/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-165"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/ura/catalog/mda-listing",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/catalog/mda-listing",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-166"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/ura/catalog/mda-tax-codes",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/catalog/mda-tax-codes",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-167"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/ura/catalog/tax-head-detail",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/catalog/tax-head-detail",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-168"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/ura/efris-outbox",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/efris-outbox",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-169"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/ura/efris-outbox/:id/retry",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/efris-outbox/{{id}}/retry",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-170"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/ura/efris-outbox/enqueue-from-request",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/efris-outbox/enqueue-from-request",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-171"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/ura/health",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/health",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-172"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/ura/prn/details",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/prn/details",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-173"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/ura/prn/generate",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/prn/generate",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-174"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/ura/prn/rent-payment",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/prn/rent-payment",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-175"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/ura/rent-payments/:invoicePaymentId/prn",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/rent-payments/{{invoicePaymentId}}/prn",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-176"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/ura/requests",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/requests",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-177"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/ura/requests/:id",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/requests/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-178"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/ura/requests/:id/retry",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/requests/{{id}}/retry",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-179"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/ura/tin-verifications",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/tin-verifications",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-180"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/ura/tin-verifications/:id/override",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/tin-verifications/{{id}}/override",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-181"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/ura/tin/verify",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ura/tin/verify",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from ura.routes.js mounted at /api/ura.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-182"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from ura.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-018",
+      "name": "Vendor",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/superadmin/vendors",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/vendors",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/superadmin/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-183"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/superadmin/vendors",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/vendors",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/superadmin/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-184"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/superadmin/vendors/:id",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/vendors/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/superadmin/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-185"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/superadmin/vendors/:id/approve",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/vendors/{{id}}/approve",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/superadmin/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-186"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/superadmin/vendors/:id/reject",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/vendors/{{id}}/reject",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/superadmin/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-187"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/superadmin/vendors/setup-shop",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/superadmin/vendors/setup-shop",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/superadmin/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-188"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "GET /api/vendors",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-189"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/vendors",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-190"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "DELETE /api/vendors/:id",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-191"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/vendors/:id/approve",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{id}}/approve",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-192"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/vendors/:id/reject",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/{{id}}/reject",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-193"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/vendors/setup-shop",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/vendors/setup-shop",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from vendor.routes.js mounted at /api/vendors.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-194"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": "Generated from vendor.routes.js. Replace placeholders before real execution.",
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "v": 12,
+      "id": "fld-generated-019",
+      "name": "Rating",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "POST /api/ratings",
+          "method": "POST",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ratings",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from rating.routes.js mounted at /api/ratings.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-195"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "GET /api/ratings/given/me",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ratings/given/me",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from rating.routes.js mounted at /api/ratings.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-196"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "GET /api/ratings/received/me",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ratings/received/me",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from rating.routes.js mounted at /api/ratings.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-197"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "GET /api/ratings/delivery/:deliveryId",
+          "method": "GET",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ratings/delivery/{{deliveryId}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from rating.routes.js mounted at /api/ratings.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-198"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "PATCH /api/ratings/:id",
+          "method": "PATCH",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ratings/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from rating.routes.js mounted at /api/ratings.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-199"
+        },
+        {
+          "v": "17",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "body": "{\n  \"replace\": \"me\"\n}",
+            "contentType": "application/json"
+          },
+          "name": "DELETE /api/ratings/:id",
+          "method": "DELETE",
+          "params": [],
+          "headers": [
+            {
+              "key": "Accept",
+              "value": "application/json",
+              "active": true
+            }
+          ],
+          "endpoint": "<<mmis_base_url>>/api/ratings/{{id}}",
+          "responses": {},
+          "testScript": "",
+          "description": "Generated from rating.routes.js mounted at /api/ratings.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-generated-200"
+        }
+      ]
+    }
+  ],
+  "requests": [],
+  "auth": {
+    "authType": "inherit",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [],
+  "description": "Generated from the live implemented endpoint inventory. Coverage-first skeleton only; add real auth, values, and assertions before execution.",
+  "preRequestScript": "",
+  "testScript": ""
+}

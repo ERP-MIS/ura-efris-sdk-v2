@@ -1,0 +1,1365 @@
+{
+  "generatedAt": "2026-06-25T22:50:37.467Z",
+  "workspace": "C:\\FTS\\NovoRepo_FOITS\\MMIS-URA-FTS-DEV",
+  "routeCount": 194,
+  "routes": [
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/invoices",
+      "fullPath": "/api/admin/invoices"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/invoices/:invoiceId",
+      "fullPath": "/api/admin/invoices/:invoiceId"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/invoices/:invoiceId/pdf",
+      "fullPath": "/api/admin/invoices/:invoiceId/pdf"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/invoices/generation-runs",
+      "fullPath": "/api/admin/invoices/generation-runs"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/admin/invoices/generation-runs",
+      "fullPath": "/api/admin/invoices/generation-runs"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/invoices/generation-runs/:id",
+      "fullPath": "/api/admin/invoices/generation-runs/:id"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/payment-claims",
+      "fullPath": "/api/admin/payment-claims"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/payment-claims/:id",
+      "fullPath": "/api/admin/payment-claims/:id"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/admin/payment-claims/:id/approve",
+      "fullPath": "/api/admin/payment-claims/:id/approve"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/admin/payment-claims/:id/reject",
+      "fullPath": "/api/admin/payment-claims/:id/reject"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/payments/collections",
+      "fullPath": "/api/admin/payments/collections"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/payments/online",
+      "fullPath": "/api/admin/payments/online"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/payments/online/:attemptId",
+      "fullPath": "/api/admin/payments/online/:attemptId"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/admin/payments/online/:attemptId/reverify",
+      "fullPath": "/api/admin/payments/online/:attemptId/reverify"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/payments/outstanding",
+      "fullPath": "/api/admin/payments/outstanding"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/admin/payments/send-reminder",
+      "fullPath": "/api/admin/payments/send-reminder"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/payments/vendors",
+      "fullPath": "/api/admin/payments/vendors"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/payments/webhooks",
+      "fullPath": "/api/admin/payments/webhooks"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/admin/payments/webhooks/:eventId/reprocess",
+      "fullPath": "/api/admin/payments/webhooks/:eventId/reprocess"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/admin/refunds",
+      "fullPath": "/api/admin/refunds"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/admin/refunds",
+      "fullPath": "/api/admin/refunds"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/admin/refunds/:refundId/status",
+      "fullPath": "/api/admin/refunds/:refundId/status"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "GET",
+      "routePath": "/catalog/mda-listing",
+      "fullPath": "/api/admin/ura/catalog/mda-listing"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "GET",
+      "routePath": "/catalog/mda-tax-codes",
+      "fullPath": "/api/admin/ura/catalog/mda-tax-codes"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "POST",
+      "routePath": "/catalog/tax-head-detail",
+      "fullPath": "/api/admin/ura/catalog/tax-head-detail"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "GET",
+      "routePath": "/efris-outbox",
+      "fullPath": "/api/admin/ura/efris-outbox"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "POST",
+      "routePath": "/efris-outbox/:id/retry",
+      "fullPath": "/api/admin/ura/efris-outbox/:id/retry"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "POST",
+      "routePath": "/efris-outbox/enqueue-from-request",
+      "fullPath": "/api/admin/ura/efris-outbox/enqueue-from-request"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "GET",
+      "routePath": "/health",
+      "fullPath": "/api/admin/ura/health"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "POST",
+      "routePath": "/prn/details",
+      "fullPath": "/api/admin/ura/prn/details"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "POST",
+      "routePath": "/prn/generate",
+      "fullPath": "/api/admin/ura/prn/generate"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "POST",
+      "routePath": "/prn/rent-payment",
+      "fullPath": "/api/admin/ura/prn/rent-payment"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "POST",
+      "routePath": "/rent-payments/:invoicePaymentId/prn",
+      "fullPath": "/api/admin/ura/rent-payments/:invoicePaymentId/prn"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "GET",
+      "routePath": "/requests",
+      "fullPath": "/api/admin/ura/requests"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "GET",
+      "routePath": "/requests/:id",
+      "fullPath": "/api/admin/ura/requests/:id"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "POST",
+      "routePath": "/requests/:id/retry",
+      "fullPath": "/api/admin/ura/requests/:id/retry"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "GET",
+      "routePath": "/tin-verifications",
+      "fullPath": "/api/admin/ura/tin-verifications"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "POST",
+      "routePath": "/tin-verifications/:id/override",
+      "fullPath": "/api/admin/ura/tin-verifications/:id/override"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/admin/ura",
+      "method": "POST",
+      "routePath": "/tin/verify",
+      "fullPath": "/api/admin/ura/tin/verify"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/change-password",
+      "fullPath": "/api/auth/change-password"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/forgot-password",
+      "fullPath": "/api/auth/forgot-password"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/gate-token/:supplierId",
+      "fullPath": "/api/auth/gate-token/:supplierId"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/invite-marketmaster",
+      "fullPath": "/api/auth/invite-marketmaster"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/kabale-claim/request-email",
+      "fullPath": "/api/auth/kabale-claim/request-email"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/kabale-claim/set-password",
+      "fullPath": "/api/auth/kabale-claim/set-password"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/kabale-claim/verify-email",
+      "fullPath": "/api/auth/kabale-claim/verify-email"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/login",
+      "fullPath": "/api/auth/login"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/logout",
+      "fullPath": "/api/auth/logout"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "GET",
+      "routePath": "/markets",
+      "fullPath": "/api/auth/markets"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "GET",
+      "routePath": "/me",
+      "fullPath": "/api/auth/me"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/refresh",
+      "fullPath": "/api/auth/refresh"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/register",
+      "fullPath": "/api/auth/register"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/register-supplier",
+      "fullPath": "/api/auth/register-supplier"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/resend-verification",
+      "fullPath": "/api/auth/resend-verification"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/reset-password",
+      "fullPath": "/api/auth/reset-password"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/set-gate-counter-password",
+      "fullPath": "/api/auth/set-gate-counter-password"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/set-marketmaster-password",
+      "fullPath": "/api/auth/set-marketmaster-password"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/set-supplier-password",
+      "fullPath": "/api/auth/set-supplier-password"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/set-vendor-password",
+      "fullPath": "/api/auth/set-vendor-password"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/update-profile",
+      "fullPath": "/api/auth/update-profile"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "GET",
+      "routePath": "/verify-email",
+      "fullPath": "/api/auth/verify-email"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "POST",
+      "routePath": "/verify-email",
+      "fullPath": "/api/auth/verify-email"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "GET",
+      "routePath": "/verify-gate-counter-email",
+      "fullPath": "/api/auth/verify-gate-counter-email"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "GET",
+      "routePath": "/verify-marketmaster-email",
+      "fullPath": "/api/auth/verify-marketmaster-email"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "GET",
+      "routePath": "/verify-supplier-email",
+      "fullPath": "/api/auth/verify-supplier-email"
+    },
+    {
+      "file": "auth.routes.js",
+      "mount": "/api/auth",
+      "method": "GET",
+      "routePath": "/verify-vendor-email",
+      "fullPath": "/api/auth/verify-vendor-email"
+    },
+    {
+      "file": "cities.routes.js",
+      "mount": "/api/cities",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/cities"
+    },
+    {
+      "file": "dashboard.routes.js",
+      "mount": "/api/dashboard",
+      "method": "GET",
+      "routePath": "/users/under-me/count",
+      "fullPath": "/api/dashboard/users/under-me/count"
+    },
+    {
+      "file": "delivery.routes.js",
+      "mount": "/api/deliveries",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/deliveries"
+    },
+    {
+      "file": "delivery.routes.js",
+      "mount": "/api/deliveries",
+      "method": "GET",
+      "routePath": "/:id",
+      "fullPath": "/api/deliveries/:id"
+    },
+    {
+      "file": "delivery.routes.js",
+      "mount": "/api/deliveries",
+      "method": "PATCH",
+      "routePath": "/:id/cancel",
+      "fullPath": "/api/deliveries/:id/cancel"
+    },
+    {
+      "file": "delivery.routes.js",
+      "mount": "/api/deliveries",
+      "method": "PATCH",
+      "routePath": "/:id/dispatch",
+      "fullPath": "/api/deliveries/:id/dispatch"
+    },
+    {
+      "file": "delivery.routes.js",
+      "mount": "/api/deliveries",
+      "method": "PATCH",
+      "routePath": "/:id/receive",
+      "fullPath": "/api/deliveries/:id/receive"
+    },
+    {
+      "file": "delivery.routes.js",
+      "mount": "/api/deliveries",
+      "method": "PATCH",
+      "routePath": "/:id/verify",
+      "fullPath": "/api/deliveries/:id/verify"
+    },
+    {
+      "file": "marketGate.routes.js",
+      "mount": "/api/market-gates",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/market-gates"
+    },
+    {
+      "file": "marketGate.routes.js",
+      "mount": "/api/market-gates",
+      "method": "POST",
+      "routePath": "/",
+      "fullPath": "/api/market-gates"
+    },
+    {
+      "file": "marketGate.routes.js",
+      "mount": "/api/market-gates",
+      "method": "DELETE",
+      "routePath": "/:id",
+      "fullPath": "/api/market-gates/:id"
+    },
+    {
+      "file": "marketGate.routes.js",
+      "mount": "/api/market-gates",
+      "method": "GET",
+      "routePath": "/:id",
+      "fullPath": "/api/market-gates/:id"
+    },
+    {
+      "file": "marketGate.routes.js",
+      "mount": "/api/market-gates",
+      "method": "PUT",
+      "routePath": "/:id",
+      "fullPath": "/api/market-gates/:id"
+    },
+    {
+      "file": "marketGate.routes.js",
+      "mount": "/api/market-gates",
+      "method": "GET",
+      "routePath": "/market/:marketId",
+      "fullPath": "/api/market-gates/market/:marketId"
+    },
+    {
+      "file": "staff.routes.js",
+      "mount": "/api/market/gate-counter-staffs",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/market/gate-counter-staffs"
+    },
+    {
+      "file": "staff.routes.js",
+      "mount": "/api/market/gate-counter-staffs",
+      "method": "POST",
+      "routePath": "/",
+      "fullPath": "/api/market/gate-counter-staffs"
+    },
+    {
+      "file": "staff.routes.js",
+      "mount": "/api/market/gate-counter-staffs",
+      "method": "DELETE",
+      "routePath": "/:id",
+      "fullPath": "/api/market/gate-counter-staffs/:id"
+    },
+    {
+      "file": "staff.routes.js",
+      "mount": "/api/market/gate-counter-staffs",
+      "method": "PUT",
+      "routePath": "/:id",
+      "fullPath": "/api/market/gate-counter-staffs/:id"
+    },
+    {
+      "file": "staff.routes.js",
+      "mount": "/api/market/gate-counter-staffs",
+      "method": "GET",
+      "routePath": "/stats",
+      "fullPath": "/api/market/gate-counter-staffs/stats"
+    },
+    {
+      "file": "token.routes.js",
+      "mount": "/api/market/tokens",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/market/tokens"
+    },
+    {
+      "file": "token.routes.js",
+      "mount": "/api/market/tokens",
+      "method": "GET",
+      "routePath": "/:code",
+      "fullPath": "/api/market/tokens/:code"
+    },
+    {
+      "file": "token.routes.js",
+      "mount": "/api/market/tokens",
+      "method": "POST",
+      "routePath": "/dispatch",
+      "fullPath": "/api/market/tokens/dispatch"
+    },
+    {
+      "file": "token.routes.js",
+      "mount": "/api/market/tokens",
+      "method": "POST",
+      "routePath": "/entry",
+      "fullPath": "/api/market/tokens/entry"
+    },
+    {
+      "file": "token.routes.js",
+      "mount": "/api/market/tokens",
+      "method": "PUT",
+      "routePath": "/exit",
+      "fullPath": "/api/market/tokens/exit"
+    },
+    {
+      "file": "marketLevel.routes.js",
+      "mount": "/api/marketLevels",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/marketLevels"
+    },
+    {
+      "file": "marketLevel.routes.js",
+      "mount": "/api/marketLevels",
+      "method": "POST",
+      "routePath": "/",
+      "fullPath": "/api/marketLevels"
+    },
+    {
+      "file": "marketLevel.routes.js",
+      "mount": "/api/marketLevels",
+      "method": "DELETE",
+      "routePath": "/:id",
+      "fullPath": "/api/marketLevels/:id"
+    },
+    {
+      "file": "marketLevel.routes.js",
+      "mount": "/api/marketLevels",
+      "method": "GET",
+      "routePath": "/:id",
+      "fullPath": "/api/marketLevels/:id"
+    },
+    {
+      "file": "marketLevel.routes.js",
+      "mount": "/api/marketLevels",
+      "method": "PUT",
+      "routePath": "/:id",
+      "fullPath": "/api/marketLevels/:id"
+    },
+    {
+      "file": "marketLevel.routes.js",
+      "mount": "/api/marketLevels",
+      "method": "GET",
+      "routePath": "/by-market/:marketId",
+      "fullPath": "/api/marketLevels/by-market/:marketId"
+    },
+    {
+      "file": "market.route.js",
+      "mount": "/api/markets",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/markets"
+    },
+    {
+      "file": "market.route.js",
+      "mount": "/api/markets",
+      "method": "POST",
+      "routePath": "/",
+      "fullPath": "/api/markets"
+    },
+    {
+      "file": "market.route.js",
+      "mount": "/api/markets",
+      "method": "DELETE",
+      "routePath": "/:marketId",
+      "fullPath": "/api/markets/:marketId"
+    },
+    {
+      "file": "market.route.js",
+      "mount": "/api/markets",
+      "method": "GET",
+      "routePath": "/:marketId",
+      "fullPath": "/api/markets/:marketId"
+    },
+    {
+      "file": "market.route.js",
+      "mount": "/api/markets",
+      "method": "PUT",
+      "routePath": "/:marketId",
+      "fullPath": "/api/markets/:marketId"
+    },
+    {
+      "file": "market.route.js",
+      "mount": "/api/markets",
+      "method": "GET",
+      "routePath": "/market-name-list",
+      "fullPath": "/api/markets/market-name-list"
+    },
+    {
+      "file": "marketSection.routes.js",
+      "mount": "/api/marketSections",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/marketSections"
+    },
+    {
+      "file": "marketSection.routes.js",
+      "mount": "/api/marketSections",
+      "method": "POST",
+      "routePath": "/",
+      "fullPath": "/api/marketSections"
+    },
+    {
+      "file": "marketSection.routes.js",
+      "mount": "/api/marketSections",
+      "method": "DELETE",
+      "routePath": "/:id",
+      "fullPath": "/api/marketSections/:id"
+    },
+    {
+      "file": "marketSection.routes.js",
+      "mount": "/api/marketSections",
+      "method": "GET",
+      "routePath": "/:id",
+      "fullPath": "/api/marketSections/:id"
+    },
+    {
+      "file": "marketSection.routes.js",
+      "mount": "/api/marketSections",
+      "method": "PUT",
+      "routePath": "/:id",
+      "fullPath": "/api/marketSections/:id"
+    },
+    {
+      "file": "notification.routes.js",
+      "mount": "/api/notifications",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/notifications"
+    },
+    {
+      "file": "notification.routes.js",
+      "mount": "/api/notifications",
+      "method": "PATCH",
+      "routePath": "/:id/read",
+      "fullPath": "/api/notifications/:id/read"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/payments/evidence",
+      "fullPath": "/api/payments/evidence"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/payments/flutterwave/webhook",
+      "fullPath": "/api/payments/flutterwave/webhook"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/payments/rent/record",
+      "fullPath": "/api/payments/rent/record"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/products",
+      "method": "DELETE",
+      "routePath": "/:productId",
+      "fullPath": "/api/products/:productId"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/products",
+      "method": "GET",
+      "routePath": "/:productId",
+      "fullPath": "/api/products/:productId"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/products",
+      "method": "PATCH",
+      "routePath": "/:productId",
+      "fullPath": "/api/products/:productId"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/products",
+      "method": "GET",
+      "routePath": "/:vendorId/products",
+      "fullPath": "/api/products/:vendorId/products"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/products",
+      "method": "POST",
+      "routePath": "/:vendorId/products",
+      "fullPath": "/api/products/:vendorId/products"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/products",
+      "method": "POST",
+      "routePath": "/:vendorId/products/bulk-upload",
+      "fullPath": "/api/products/:vendorId/products/bulk-upload"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/products",
+      "method": "POST",
+      "routePath": "/:vendorId/products/bulk-upload",
+      "fullPath": "/api/products/:vendorId/products/bulk-upload"
+    },
+    {
+      "file": "shop.routes.js",
+      "mount": "/api/shops",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/shops"
+    },
+    {
+      "file": "shop.routes.js",
+      "mount": "/api/shops",
+      "method": "POST",
+      "routePath": "/",
+      "fullPath": "/api/shops"
+    },
+    {
+      "file": "shop.routes.js",
+      "mount": "/api/shops",
+      "method": "DELETE",
+      "routePath": "/:id",
+      "fullPath": "/api/shops/:id"
+    },
+    {
+      "file": "shop.routes.js",
+      "mount": "/api/shops",
+      "method": "GET",
+      "routePath": "/:id",
+      "fullPath": "/api/shops/:id"
+    },
+    {
+      "file": "shop.routes.js",
+      "mount": "/api/shops",
+      "method": "PUT",
+      "routePath": "/:id",
+      "fullPath": "/api/shops/:id"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/superadmin/suppliers",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/superadmin/suppliers"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/superadmin/suppliers",
+      "method": "POST",
+      "routePath": "/",
+      "fullPath": "/api/superadmin/suppliers"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/superadmin/suppliers",
+      "method": "DELETE",
+      "routePath": "/:id",
+      "fullPath": "/api/superadmin/suppliers/:id"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/superadmin/suppliers",
+      "method": "GET",
+      "routePath": "/:id",
+      "fullPath": "/api/superadmin/suppliers/:id"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/superadmin/suppliers",
+      "method": "PUT",
+      "routePath": "/:id",
+      "fullPath": "/api/superadmin/suppliers/:id"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/superadmin/suppliers",
+      "method": "POST",
+      "routePath": "/setup-profile",
+      "fullPath": "/api/superadmin/suppliers/setup-profile"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/superadmin/vendors",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/superadmin/vendors"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/superadmin/vendors",
+      "method": "POST",
+      "routePath": "/",
+      "fullPath": "/api/superadmin/vendors"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/superadmin/vendors",
+      "method": "DELETE",
+      "routePath": "/:id",
+      "fullPath": "/api/superadmin/vendors/:id"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/superadmin/vendors",
+      "method": "POST",
+      "routePath": "/:id/approve",
+      "fullPath": "/api/superadmin/vendors/:id/approve"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/superadmin/vendors",
+      "method": "POST",
+      "routePath": "/:id/reject",
+      "fullPath": "/api/superadmin/vendors/:id/reject"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/superadmin/vendors",
+      "method": "POST",
+      "routePath": "/setup-shop",
+      "fullPath": "/api/superadmin/vendors/setup-shop"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/suppliers",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/suppliers"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/suppliers",
+      "method": "POST",
+      "routePath": "/",
+      "fullPath": "/api/suppliers"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/suppliers",
+      "method": "DELETE",
+      "routePath": "/:id",
+      "fullPath": "/api/suppliers/:id"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/suppliers",
+      "method": "GET",
+      "routePath": "/:id",
+      "fullPath": "/api/suppliers/:id"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/suppliers",
+      "method": "PUT",
+      "routePath": "/:id",
+      "fullPath": "/api/suppliers/:id"
+    },
+    {
+      "file": "supplier.routes.js",
+      "mount": "/api/suppliers",
+      "method": "POST",
+      "routePath": "/setup-profile",
+      "fullPath": "/api/suppliers/setup-profile"
+    },
+    {
+      "file": "supply-request.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/suppliers/supply-requests/:supplyRequestId/bids",
+      "fullPath": "/api/suppliers/supply-requests/:supplyRequestId/bids"
+    },
+    {
+      "file": "supply-request.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/supply-request-bids",
+      "fullPath": "/api/supply-request-bids"
+    },
+    {
+      "file": "supply-request.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/supply-request-bids/:id",
+      "fullPath": "/api/supply-request-bids/:id"
+    },
+    {
+      "file": "supply-request.routes.js",
+      "mount": "/api",
+      "method": "DELETE",
+      "routePath": "/supply-requests/:id",
+      "fullPath": "/api/supply-requests/:id"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "GET",
+      "routePath": "/catalog/mda-listing",
+      "fullPath": "/api/ura/catalog/mda-listing"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "GET",
+      "routePath": "/catalog/mda-tax-codes",
+      "fullPath": "/api/ura/catalog/mda-tax-codes"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "POST",
+      "routePath": "/catalog/tax-head-detail",
+      "fullPath": "/api/ura/catalog/tax-head-detail"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "GET",
+      "routePath": "/efris-outbox",
+      "fullPath": "/api/ura/efris-outbox"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "POST",
+      "routePath": "/efris-outbox/:id/retry",
+      "fullPath": "/api/ura/efris-outbox/:id/retry"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "POST",
+      "routePath": "/efris-outbox/enqueue-from-request",
+      "fullPath": "/api/ura/efris-outbox/enqueue-from-request"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "GET",
+      "routePath": "/health",
+      "fullPath": "/api/ura/health"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "POST",
+      "routePath": "/prn/details",
+      "fullPath": "/api/ura/prn/details"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "POST",
+      "routePath": "/prn/generate",
+      "fullPath": "/api/ura/prn/generate"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "POST",
+      "routePath": "/prn/rent-payment",
+      "fullPath": "/api/ura/prn/rent-payment"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "POST",
+      "routePath": "/rent-payments/:invoicePaymentId/prn",
+      "fullPath": "/api/ura/rent-payments/:invoicePaymentId/prn"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "GET",
+      "routePath": "/requests",
+      "fullPath": "/api/ura/requests"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "GET",
+      "routePath": "/requests/:id",
+      "fullPath": "/api/ura/requests/:id"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "POST",
+      "routePath": "/requests/:id/retry",
+      "fullPath": "/api/ura/requests/:id/retry"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "GET",
+      "routePath": "/tin-verifications",
+      "fullPath": "/api/ura/tin-verifications"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "POST",
+      "routePath": "/tin-verifications/:id/override",
+      "fullPath": "/api/ura/tin-verifications/:id/override"
+    },
+    {
+      "file": "ura.routes.js",
+      "mount": "/api/ura",
+      "method": "POST",
+      "routePath": "/tin/verify",
+      "fullPath": "/api/ura/tin/verify"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/vendors",
+      "method": "GET",
+      "routePath": "/",
+      "fullPath": "/api/vendors"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/vendors",
+      "method": "POST",
+      "routePath": "/",
+      "fullPath": "/api/vendors"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/vendors",
+      "method": "DELETE",
+      "routePath": "/:id",
+      "fullPath": "/api/vendors/:id"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/vendors",
+      "method": "POST",
+      "routePath": "/:id/approve",
+      "fullPath": "/api/vendors/:id/approve"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/vendors",
+      "method": "POST",
+      "routePath": "/:id/reject",
+      "fullPath": "/api/vendors/:id/reject"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/vendors",
+      "method": "DELETE",
+      "routePath": "/:productId",
+      "fullPath": "/api/vendors/:productId"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/vendors",
+      "method": "GET",
+      "routePath": "/:productId",
+      "fullPath": "/api/vendors/:productId"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/vendors",
+      "method": "PATCH",
+      "routePath": "/:productId",
+      "fullPath": "/api/vendors/:productId"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/invoices",
+      "fullPath": "/api/vendors/:vendorId/invoices"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/invoices/:invoiceId",
+      "fullPath": "/api/vendors/:vendorId/invoices/:invoiceId"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/invoices/:invoiceId/pdf",
+      "fullPath": "/api/vendors/:vendorId/invoices/:invoiceId/pdf"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/payment-claims",
+      "fullPath": "/api/vendors/:vendorId/payment-claims"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/vendors/:vendorId/payment-claims",
+      "fullPath": "/api/vendors/:vendorId/payment-claims"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/payments/attempts",
+      "fullPath": "/api/vendors/:vendorId/payments/attempts"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/vendors/:vendorId/payments/attempts",
+      "fullPath": "/api/vendors/:vendorId/payments/attempts"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/payments/attempts/:attemptId",
+      "fullPath": "/api/vendors/:vendorId/payments/attempts/:attemptId"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/vendors/:vendorId/payments/attempts/:attemptId/refresh",
+      "fullPath": "/api/vendors/:vendorId/payments/attempts/:attemptId/refresh"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/payments/attempts/:attemptId/status",
+      "fullPath": "/api/vendors/:vendorId/payments/attempts/:attemptId/status"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/payments/history",
+      "fullPath": "/api/vendors/:vendorId/payments/history"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/payments/receipts/:paymentId/pdf",
+      "fullPath": "/api/vendors/:vendorId/payments/receipts/:paymentId/pdf"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/payments/rent",
+      "fullPath": "/api/vendors/:vendorId/payments/rent"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/payments/summary",
+      "fullPath": "/api/vendors/:vendorId/payments/summary"
+    },
+    {
+      "file": "payment.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/:vendorId/payments/tax",
+      "fullPath": "/api/vendors/:vendorId/payments/tax"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/vendors",
+      "method": "GET",
+      "routePath": "/:vendorId/products",
+      "fullPath": "/api/vendors/:vendorId/products"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/vendors",
+      "method": "POST",
+      "routePath": "/:vendorId/products",
+      "fullPath": "/api/vendors/:vendorId/products"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/vendors",
+      "method": "POST",
+      "routePath": "/:vendorId/products/bulk-upload",
+      "fullPath": "/api/vendors/:vendorId/products/bulk-upload"
+    },
+    {
+      "file": "product.routes.js",
+      "mount": "/api/vendors",
+      "method": "POST",
+      "routePath": "/:vendorId/products/bulk-upload",
+      "fullPath": "/api/vendors/:vendorId/products/bulk-upload"
+    },
+    {
+      "file": "vendor.routes.js",
+      "mount": "/api/vendors",
+      "method": "POST",
+      "routePath": "/setup-shop",
+      "fullPath": "/api/vendors/setup-shop"
+    },
+    {
+      "file": "supply-request.routes.js",
+      "mount": "/api",
+      "method": "PATCH",
+      "routePath": "/vendors/supply-request-bids/:id/accept",
+      "fullPath": "/api/vendors/supply-request-bids/:id/accept"
+    },
+    {
+      "file": "supply-request.routes.js",
+      "mount": "/api",
+      "method": "GET",
+      "routePath": "/vendors/supply-requests",
+      "fullPath": "/api/vendors/supply-requests"
+    },
+    {
+      "file": "supply-request.routes.js",
+      "mount": "/api",
+      "method": "POST",
+      "routePath": "/vendors/supply-requests",
+      "fullPath": "/api/vendors/supply-requests"
+    }
+  ]
+}

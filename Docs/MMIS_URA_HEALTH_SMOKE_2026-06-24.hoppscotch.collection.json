@@ -1,0 +1,57 @@
+{
+  "v": 12,
+  "id": "col-health-smoke",
+  "name": "MMIS URA Health Smoke",
+  "folders": [
+    {
+      "v": 12,
+      "id": "fld-health-smoke",
+      "name": "URA",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "auth": {
+            "authType": "bearer",
+            "token": "<<admin_jwt>>",
+            "authActive": true
+          },
+          "body": {
+            "body": null,
+            "contentType": null
+          },
+          "name": "URA Health",
+          "method": "GET",
+          "params": [],
+          "headers": [],
+          "endpoint": "<<mmis_base_url>>/api/ura/health",
+          "responses": {},
+          "testScript": "pw.test('URA health returns 200', () => { pw.expect(pw.response.status).toBe(200); });",
+          "description": "Minimal authenticated health smoke.",
+          "preRequestScript": "",
+          "requestVariables": [],
+          "id": "req-health-smoke"
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null,
+      "preRequestScript": "",
+      "testScript": ""
+    }
+  ],
+  "requests": [],
+  "auth": {
+    "authType": "inherit",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [],
+  "description": "Minimal Hoppscotch URA health smoke.",
+  "preRequestScript": "",
+  "testScript": ""
+}

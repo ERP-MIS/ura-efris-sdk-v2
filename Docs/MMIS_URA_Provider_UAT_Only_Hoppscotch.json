@@ -1,0 +1,113 @@
+[
+  {
+    "v": 12,
+    "id": "cmpay2wkq0pcqjn1mx36w4ak9-provider-uat-only",
+    "name": "URA Provider UAT Only",
+    "folders": [
+      {
+        "v": 12,
+        "id": "cmq4vni7c0bsqfw1m7f8b8drj",
+        "name": "verifications",
+        "folders": [],
+        "requests": [
+          {
+            "v": "17",
+            "auth": {
+              "token": "<redacted>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": "{\n  \"tin\": \"1009567698\"\n}",
+              "contentType": "application/json"
+            },
+            "name": "Tin Verification",
+            "method": "POST",
+            "params": [],
+            "headers": [],
+            "endpoint": "https://api-uat.ura.go.ug/partner-service/2.0.0/mda-services/get-tin-details",
+            "responses": {},
+            "testScript": "",
+            "description": null,
+            "preRequestScript": "",
+            "requestVariables": [],
+            "id": "cmq4vodw90c3qhp1mmtkfky59"
+          },
+          {
+            "v": "17",
+            "auth": {
+              "authType": "basic",
+              "password": "<redacted>",
+              "username": "CmViyEv3wn8jgy2Ck18mSk3CPi8a",
+              "authActive": true
+            },
+            "body": {
+              "body": "grant_type: client_credentials\n# scope: mda-services/get-tin-details\nscope: prn-services/generate-prn",
+              "contentType": "application/x-www-form-urlencoded"
+            },
+            "name": "Generate access token for ura",
+            "method": "POST",
+            "params": [],
+            "headers": [],
+            "endpoint": "https://developer-uat.ura.go.ug/oauth2/token",
+            "responses": {},
+            "testScript": "",
+            "description": null,
+            "preRequestScript": "",
+            "requestVariables": [],
+            "id": "cmq4y1cq20d56fw1m157saa1q"
+          },
+          {
+            "v": "17",
+            "auth": {
+              "token": "<redacted>",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "body": {
+              "body": "{\n  \"amount\": 250000,\n  \"assessmentDate\": \"2026-06-16T06:25:20.935Z\",\n  \"paymentType\": \"DT\",\n  \"referenceNo\": \"REF-20260616-0001\",\n  \"tin\": \"1009567698\",\n  \"srcSystem\": \"URA_PORTAL\",\n  \"taxHead\": \"PAYE\",\n  \"taxSubHead\": \"PAYE\",\n  \"email\": \"john.doe@example.com\",\n  \"taxPayerName\": \"John Doe\",\n  \"plot\": \"Plot 24B\",\n  \"buildingName\": \"Sunrise Towers\",\n  \"street\": \"Kampala Road\",\n  \"tradeCentre\": \"Central Business District\",\n  \"district\": \"Kampala\",\n  \"county\": \"Kampala Central\",\n  \"subCounty\": \"Central Division\",\n  \"parish\": \"Nakasero\",\n  \"village\": \"Nakasero Village\",\n  \"localCouncil\": \"LC1 Nakasero\",\n  \"contactNo\": \"0772123456\",\n  \"paymentPeriod\": \"2026-06\",\n  \"expiryDays\": \"14\",\n  \"mobileMoneyNumber\": \"0772123456\",\n  \"mobileNo\": \"0772123456\"\n}",
+              "contentType": "application/json"
+            },
+            "name": "prn",
+            "method": "POST",
+            "params": [],
+            "headers": [],
+            "endpoint": "https://api-uat.ura.go.ug/partner-service/2.0.0/prn-services/generate-prn",
+            "responses": {},
+            "testScript": "",
+            "description": null,
+            "preRequestScript": "",
+            "requestVariables": [],
+            "id": "cmqg9e3zb0llbhh1mqnrc26uu"
+          }
+        ],
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "headers": [],
+        "variables": [],
+        "description": null,
+        "preRequestScript": "",
+        "testScript": ""
+      }
+    ],
+    "requests": [],
+    "auth": {
+      "authType": "inherit",
+      "authActive": true
+    },
+    "headers": [],
+    "variables": [
+      {
+        "key": "baseURL",
+        "initialValue": "",
+        "currentValue": "",
+        "secret": "<redacted>"
+      }
+    ],
+    "description": null,
+    "preRequestScript": "",
+    "testScript": ""
+  }
+]

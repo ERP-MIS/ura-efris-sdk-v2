@@ -1,0 +1,8 @@
+probe_group,label,path,status,dependency_class,evidence
+ura_runtime_probe,health,/api/ura/health,200,mock_runnable,.runner-tools/reports/mmis-ura-runtime-dependency-probe.summary.json
+ura_runtime_probe,mda_listing,/api/ura/catalog/mda-listing,503,db_blocked,.runner-tools/reports/mmis-ura-runtime-dependency-probe.summary.json
+ura_runtime_probe,requests,/api/admin/ura/requests?limit=1,503,db_blocked,.runner-tools/reports/mmis-ura-runtime-dependency-probe.summary.json
+ura_runtime_probe,tin_verifications,/api/admin/ura/tin-verifications?limit=1,503,db_blocked,.runner-tools/reports/mmis-ura-runtime-dependency-probe.summary.json
+ura_runtime_probe,efris_outbox,/api/admin/ura/efris-outbox?limit=1,503,db_blocked,.runner-tools/reports/mmis-ura-runtime-dependency-probe.summary.json
+health_smoke,newman_and_hoppscotch,/api/ura/health,200,mock_runnable,.runner-tools/reports/mmis-ura-health-smoke-5052.summary.json
+safe_path_runner,full_mode_readiness,collection_subset,blocked,missing_runtime_inputs,.runner-tools/reports/mmis-onboarding-safe-path-full-5053.summary.json
