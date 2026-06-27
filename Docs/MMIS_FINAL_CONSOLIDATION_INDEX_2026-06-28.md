@@ -2,7 +2,7 @@
 
 Date: 2026-06-28
 Workspace branch: `feat/mmis-final-consolidation-workspace-2026-06-28`
-Workspace commit: `PENDING_WORKSPACE_COMMIT`
+Workspace package commit: `796b397aac72ba5db8ad87d5c8291b07cc1d87a4`
 
 ## Final SOT Branches
 
@@ -117,3 +117,4 @@ Operational blockers still outside repo truth:
 Current route-labeling note:
 - no remaining required-route labeling gaps are open after the canonical pack was updated with the six current `ratings` routes
 - future failures from `.branch-work/MarketMasterApi npm run check:hoppscotch:drift` should be treated as real collection-update work
+
